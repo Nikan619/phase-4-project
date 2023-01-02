@@ -1,6 +1,8 @@
 // client/src/components/App.js
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import './App.css'
+import Create from './createAccount';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,7 +23,22 @@ function App() {
           <Route path="/">
             <h1>Page Count: {count}</h1>
           </Route>
+          <Route path="/create">
+            <Create />
+          </Route>
         </Switch>
+        
+        <h2 className="login-title">Login Form</h2>
+        <form>
+          <label className="enter-username">  Username: 
+          <input type="text"></input>
+          </label>
+          <label className="enter-password">  Password: 
+          <input type="text"></input>
+          </label>
+          <button><Link className="login-button" to="/testing">Login</Link></button>
+        </form>
+        <button><Link className="create-account" to="/create">Create Account</Link></button>
       </div>
     </BrowserRouter>
   );
