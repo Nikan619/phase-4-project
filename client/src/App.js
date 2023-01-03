@@ -2,32 +2,29 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import './App.css'
-import Create from './createAccount';
+import Create from './Create';
 
 function App() {
-  const [count, setCount] = useState(0);
+ const [user,setUser]=("");
+//  const [api,setApi]=("")
 
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+ const onLogin = (user) => {
+  setUser(user);
+ }
+
+
+//  useEffect(() =>
+//  {
+//   fetch("https://forkify-api.herokuapp.com/api/v2/recipes?search=pizza&key=36a6b9db-f23f-4fc7-9b67-741ec4a282f5").then((r)=>r.json()).then((data)=> setApi(data))
+//   console.log(api);
+//  });
+
 
   return (
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route path="/testing">
-            <h1>Test Route</h1>
-          </Route>
-          <Route path="/">
-            <h1>Page Count: {count}</h1>
-          </Route>
-          <Route path="/create">
-            <Create />
-          </Route>
-        </Switch>
-        
+        <Route  exact path="/">
         <h2 className="login-title">Login Form</h2>
         <form>
           <label className="enter-username">  Username: 
@@ -39,8 +36,16 @@ function App() {
           <button><Link className="login-button" to="/testing">Login</Link></button>
         </form>
         <button><Link className="create-account" to="/create">Create Account</Link></button>
-      </div>
+      
+          </Route>
+          <Route path="/create">
+            <Create onLogin={onLogin}/>
+          </Route>
+        </Switch>
+       </div> 
+       
     </BrowserRouter>
+    
   );
 }
 

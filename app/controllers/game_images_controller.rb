@@ -1,0 +1,2 @@
+class GameImagesController < ApplicationController
+end

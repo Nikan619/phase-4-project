@@ -5,4 +5,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         render json: user
     end
+
+
+    
 end
