@@ -1,6 +1,5 @@
-import React,{ useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-
+import React,{ useState } from "react";
+// import App from "./App.js"
 
 function Create ({ onLogin }) {
 const [username,setUsername] = useState("");
@@ -9,14 +8,19 @@ const [password,setPassword]=useState("");
 
 function handleSubmit(e) {
   e.preventDefault();
+  const user={
+    username,
+    password
+  }
   fetch("/signup",{
+
     method: "POST",
     headers: {"Content-Type": "application/json",
   },
-  body: JSON.stringify({username,password}),
+  body: JSON.stringify(user),
 })
 .then((r)=> r.json())
-.then((user)=> onLogin(user))
+.then((data)=> onLogin(data))
 }
 
 return (
@@ -32,8 +36,10 @@ return (
     value={password}
      onChange={(e) => setPassword(e.target.value)}
   />
-    <button type="submit">Create Account</button>
+   <button type="submit" >sign up</button>
   </form>
+
+   
   
 )
     
