@@ -1,5 +1,4 @@
-import React,{ useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import React,{ useState } from "react";
 // import App from "./App.js"
 
 function Create ({ onLogin }) {
