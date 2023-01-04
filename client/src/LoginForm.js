@@ -57,7 +57,7 @@ const LoginForm = ({onLogin}) => {
         if (response.ok) {
           return response.json();
         }
-        throw new Error('Invalid username or password');
+        throw new Error('Invalid   password');
       })
       .then((data) => {
         onLogin(data)
