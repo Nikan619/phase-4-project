@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
 
   delete "/logout", to: "sessions#destroy"
+
+  get "/games", to: "game_images#index"
 end
