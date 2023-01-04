@@ -6,6 +6,7 @@ import './App.css'
 import NavBar from './NavBar';
 import Login from './Login';
 import Loggedin from "./Loggedin";
+import Test from './Test.js';
 
 function App() {
  const [currentUser,setCurrentUser]=useState("");
@@ -15,11 +16,13 @@ function App() {
   fetch("/me").then((r)=> {
     if(r.ok){
       r.json().then((user)=>setCurrentUser(user));
+     console.log(currentUser);
     }
   });
  },[]);
 
  if(!currentUser) {
+ 
   return <Login onLogin ={setCurrentUser}/>}
  
 
@@ -41,10 +44,11 @@ function App() {
 
       <>
       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      <h1>Welcome {currentUser.username}</h1>
       <main>
         <Switch>
-        <Route  path="/halo">
-        <Loggedin user={currentUser}/>
+        <Route  path="/datapage">
+        
 
           </Route>
   

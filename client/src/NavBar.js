@@ -14,7 +14,7 @@ function NavBar ({currentUser,setCurrentUser}){
     return (
         
         <>
-<Link to="/halo">Gamepoll</Link>
+<Link to="/datapage">Gamepoll</Link>
 <button variant= "outline" onClick={handleLogOutClick}>
     Logout
 </button>
