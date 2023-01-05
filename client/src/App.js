@@ -9,6 +9,7 @@ import Loggedin from "./Loggedin";
 import Test from './Test.js';
 import Game from './Game.js';
 
+
 function App() {
  const [currentUser,setCurrentUser]=useState("");
 
@@ -47,6 +48,8 @@ function App() {
       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <h1>Welcome {currentUser.username}</h1>
       <Game />
+      
+      
       <main>
         <Switch>
         <Route  path="/datapage">

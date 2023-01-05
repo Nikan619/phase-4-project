@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import './App.css'
 import GameCard from "./GameCard.js";
+import NewGame from './NewGame.js';
 
 function Game() {
 
@@ -23,6 +24,7 @@ const mappedGames = games.map((game) =>{
 return (
     <div>
         <h1 >Game Poll</h1>
+        <NewGame games={games} setGames={setGames}/>
         {/* <h2 className="date-card">Dates to Play
         <p>Vote on a Date to Play</p>
         <button onDoubleClick={handleLike}>UpVote</button>

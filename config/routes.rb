@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get "/games", to: "game_images#index"
+
+  get "/gamespost", to: "game_images#create"
 end
