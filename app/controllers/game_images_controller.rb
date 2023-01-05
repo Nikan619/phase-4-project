@@ -15,6 +15,12 @@ def destroy
     head :no_content
 end
 
+def update 
+    game = GameImage.find(params[:id])
+    game.update(game_image_params)
+    render json:game, status: :accepted
+end
+
 private
 def game_image_params
     params.permit(:name,:image)
