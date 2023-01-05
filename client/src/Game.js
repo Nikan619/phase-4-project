@@ -18,9 +18,11 @@ function Game() {
         .then((data)=>setGames(data));
     },[]);
 
-const mappedGames = games.map((game) =>{
+const mappedGames =()=>{ 
+    
+    return games.map((game) =>{
   return(  <ul><GameCard game={game}/></ul>)
-})
+})}
 return (
     <div>
         <h1 >Game Poll</h1>
@@ -33,7 +35,7 @@ return (
         
         <h1 className="game-card">Games to Play
         <div>
-              {mappedGames}  
+              {mappedGames()}  
         </div>
         </h1>
         

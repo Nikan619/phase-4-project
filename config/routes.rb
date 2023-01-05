@@ -21,5 +21,5 @@ Rails.application.routes.draw do
 
   get "/games", to: "game_images#index"
 
-  get "/gamespost", to: "game_images#create"
+  post "/gamespost", to: "game_images#create"
 end

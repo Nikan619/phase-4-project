@@ -30,7 +30,8 @@ function NewGame({setGames,games}) {
         });
 
         const data = await response.json();
-        setGames(...games,data)
+        
+        setGames([...games,data])
       
     }
   
