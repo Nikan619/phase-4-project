@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :game_images
+  
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -22,4 +22,8 @@ Rails.application.routes.draw do
   get "/games", to: "game_images#index"
 
   post "/gamespost", to: "game_images#create"
+
+ delete "/game_images/:id", to: "game_images#destroy"
+
+#  delete '/photos/:id', to: 'photos#destroy', as: 'delete_photo'
 end

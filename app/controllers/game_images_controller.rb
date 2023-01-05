@@ -9,6 +9,12 @@ def create
     render json:game, status: :created
 end
 
+def destroy 
+    game = GameImage.find(params[:id])
+    game.destroy
+    head :no_content
+end
+
 private
 def game_image_params
     params.permit(:name,:image)

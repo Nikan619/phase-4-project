@@ -21,7 +21,7 @@ function Game() {
 const mappedGames =()=>{ 
     
     return games.map((game) =>{
-  return(  <ul><GameCard game={game}/></ul>)
+  return(  <ul><GameCard setGames={setGames} game={game}/></ul>)
 })}
 return (
     <div>
