@@ -25,19 +25,13 @@ const mappedGames =()=>{
 })}
 return (
     <div>
-        <h1 >Game Poll</h1>
+        <h1 style={{ textAlign: 'center'}}>Game Poll</h1>
         <NewGame games={games} setGames={setGames}/>
-        {/* <h2 className="date-card">Dates to Play
-        <p>Vote on a Date to Play</p>
-        <button onDoubleClick={handleLike}>UpVote</button>
-
-        </h2> */}
         
-        <h1 className="game-card">Games to Play
+        <h2 style={{ textAlign: 'center' }}>Available Games:</h2>
         <div>
               {mappedGames()}  
         </div>
-        </h1>
         
 
     </div>

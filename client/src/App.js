@@ -46,7 +46,7 @@ function App() {
 
       <>
       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
-      <h1>Welcome {currentUser.username}</h1>
+      <h1 style={{ textAlign: 'center'}}>Welcome, {currentUser.username}!</h1>
       <Game />
       
       

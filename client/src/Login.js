@@ -9,30 +9,23 @@ function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-
-<>
-      <h1>Gamepoll</h1>
+  <>
+    <h1 className='log-in-title'>Gamepoll</h1>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
-        
-          <p>
-            Don't have an account? 
-            <button  onClick={() => setShowLogin(false)}>
-              Sign Up
-            </button>
-          </p>
-        </>
+          <div style={{ textAlign: 'center'}}>
+            <p style={{ fontStyle: 'italic'}}>Don't have an account?</p>
+            <button onClick={() => setShowLogin(false)} className='sign-up-button'>Sign Up</button>
+          </div>
+  </>
       ) : (
         <>
           <Create onLogin={onLogin} />
-         
-          <p>
-            Already have an account? 
-            <button  onClick={() => setShowLogin(true)}>
-              Log In
-            </button>
-          </p>
+          <div style={{ textAlign: 'center'}}>
+            <p style={{ textAlign: 'center', fontStyle: 'italic'}}>Already have an account?</p>
+            <button onClick={() => setShowLogin(true)} className='back-to-login-button'>Back to Login</button>
+          </div>
         </>
         
       )}

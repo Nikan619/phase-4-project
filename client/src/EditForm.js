@@ -40,27 +40,21 @@ function EditForm ({game,setGames}){
     return(
 <section>
         <form onSubmit={handleSubmit}>
-        <h2>Modify Game</h2>
-        <div>
-            <label htmlFor="name">Name:</label>
-        </div>
+        <h3>Modify Game</h3>
         <div>
             <input
             type="text"
             id="name"
-            placeholder="Enter name"
+            placeholder="New Name"
             value={name}
             onChange={handleNameChange}
             />
         </div>
         <div>
-            <label htmlFor="field_of_study">Image:</label>
-        </div>
-        <div>
             <input
             type="text"
             id="image"
-            placeholder="Enter image url"
+            placeholder="New Image Url"
             value={image}
             onChange={handleImageChange}
             />

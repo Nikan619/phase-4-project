@@ -15,9 +15,7 @@ function NavBar ({currentUser,setCurrentUser}){
         
         <>
 <Link to="/datapage">Gamepoll</Link>
-<button variant= "outline" onClick={handleLogOutClick}>
-    Logout
-</button>
+<button variant= "outline" onClick={handleLogOutClick} style={{ float: 'right', padding: '5px', margin: '5px', cursor: 'pointer'}}>Logout</button>
 </>
 
     )
