@@ -39,35 +39,27 @@ function NewGame({setGames,games}) {
 
    return( 
    <section>
-    <form onSubmit={handleSubmit}>
-        <h2>Add New Game</h2>
-        <div>
-            <label htmlFor="name">Name:</label>
-        </div>
+    <form onSubmit={handleSubmit} className='new-game-form'>
+        <h3 style={{ fontStyle: 'italic'}}>Add New Game</h3>
         <div>
             <input
             type="text"
             id="name"
-            placeholder="Enter name"
+            placeholder="Enter Game Name"
             value={name}
             onChange={handleNameChange}
             />
         </div>
         <div>
-            <label htmlFor="field_of_study">Image:</label>
-        </div>
-        <div>
             <input
             type="text"
             id="image"
-            placeholder="Enter image url"
+            placeholder="Enter Game Image URL"
             value={image}
             onChange={handleImageChange}
             />
         </div>
-    
-        
-        <button type="submit">Submit</button>
+        <button type="submit" style={{ cursor: 'pointer'}}>Submit</button>
     </form>
 </section>
    )

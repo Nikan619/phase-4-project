@@ -1,3 +1,7 @@
+* {
+  background-color: rgb(178, 218, 234)
+}
+
 .App {
   text-align: center;
 }
@@ -64,20 +68,26 @@
 
 .game-card {
   color: black;
-  outline-style: dashed;
+  outline-style: groove;
   margin-left: auto;
   margin: auto; 
   position: center;
-  background-color: rgb(105, 31, 105);
-  max-width: 300px;
-  
+  background-color: rgb(135, 73, 135);
+  max-width: flex;
+  max-height: flex;
   overflow-x: hidden;
   overflow-y: auto;
   text-align:justify;
   width: 500px;
-  height: 100px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  text-align:justify;
-  border-radius: 80%;
+  height: 500px;
+  
+  border-radius: 1%;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%
+}
+

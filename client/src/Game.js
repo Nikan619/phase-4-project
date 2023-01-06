@@ -25,10 +25,13 @@ const mappedGames =()=>{
 })}
 return (
     <div>
-        <h1 >Game Poll</h1>
+        <h1 className="game-poll" style={{ textAlign: 'center'}}>Game Poll</h1>
         <NewGame games={games} setGames={setGames}/>
         
-        
+        <h2 style={{ textAlign: 'center' }}>Available Games:</h2>
+        <div>
+              {mappedGames()}  
+        </div>
         
 
     </div>

@@ -32,29 +32,20 @@ function GameCard({game,setGames}) {
 
     }
    
-    
-    // function handleDelete(id) {
-    //     fetch(`/episodes/${id}`, {
-    //       method: "DELETE",
-    //     }).then((r) => {
-    //       if (r.ok) {
-    //         setEpisodes((episodes) =>
-    //           episodes.filter((episode) => episode.id !== id)
-    //         );
-    //       }
-    //     });
-    //   }
     return (
-        <>
-        <p>{game.name}</p>
-        <img src={game.image} alt="gamepic" ></img>
-        <button onClick={handleClick}>LIKE</button>
-        <button onClick={()=> handleDelete(game.id)}>DELETE</button>
-        <button onClick={()=>handleEdit()}>EDIT</button>
-        {edit? <EditForm  game={game} setGames={setGames}/> : " "}
-        <p>{liked ? "liked":""} </p>
-        
-        </>
+        <div className='game-card'>
+            <h2>{game.name}</h2>
+            <img src={game.image} alt="gamepic" className='game-image'></img>
+            <br></br>
+            <button onClick={handleClick}>❤️</button>
+            <br></br>
+            <button onClick={()=> handleDelete(game.id)}>🗑️</button>
+            <br></br>
+            <button onClick={()=>handleEdit()}>Edit</button>
+            <br></br>
+            {edit? <EditForm  game={game} setGames={setGames}/> : " "}
+            {liked ? <p style={{ fontStyle: 'italic'}}>liked!</p> : ""}
+        </div>
     )
 }
 export default GameCard
