@@ -13,6 +13,7 @@ import RatedGames from './RatedGames.js';
 
 function App() {
  const [currentUser,setCurrentUser]=useState("");
+ const [ratings,setRatings] =useState([])
 
 
  useEffect(()=> { 
@@ -43,29 +44,23 @@ function App() {
 
   return (
     
-
-      <>
      <div className="App">
       <Switch>
-        
+        <Route exact path="/" >
       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
-      <h1>Welcome {currentUser.username}</h1>
-      <Game currentUser={currentUser} setCurrentUser={setCurrentUser}/>
-      
-      
     
-        <Switch>
-        <Route  exact path="/RatedGames">
-        <RatedGames/>
-
-          </Route>
+      <Game currentUser={currentUser} setCurrentUser={setCurrentUser}  ratings={ratings} setRatings={setRatings}/>
+      </Route>
+        
+       <Route path ="/RatedGames">    
+       <NavBar />
+        <RatedGames currentUser={currentUser}/>
+      </Route>
   
         </Switch>
-        </main>
-       </> 
+      </div>
        
-   
-    
+
   );
 }
 

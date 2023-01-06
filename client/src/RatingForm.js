@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const RatingForm = ({game,user})=>{
+const RatingForm = ({game,user,ratings,setRatings})=>{
 
 	
 
@@ -12,16 +12,17 @@ const RatingForm = ({game,user})=>{
         setRating(e.target.value);
     }
 
-    const ratingObj ={
-       id:ratingId,
-        game_rating: rating ,
-        game_image_id: game.id,
-         user_id: user.id
-        
-    };
+   
 
 
     const handleSubmit = (e) => {
+		const ratingObj ={
+			
+			 game_rating: rating ,
+			 game_image_id: game.id,
+			  user_id: user.id
+			 
+		 };
 		
 		e.preventDefault();
 		const configObj = {
@@ -31,11 +32,12 @@ const RatingForm = ({game,user})=>{
 		};
 		fetch("/ratings", configObj)
 			.then((response) => response.json())
-			.then((review) => {
+			.then((rating) => {
 				console.log(ratingObj);
-				console.log(review);
-				setRatingid(ratingId+1)
 				
+				
+				setRatings([...ratings,rating]);
+				console.log(ratings);
 				
 			});
 	};

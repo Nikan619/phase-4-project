@@ -14,6 +14,8 @@ function NavBar ({currentUser,setCurrentUser}){
     return (
         
         <>
+        <Link exact to ="/"> Games Display</Link>
+
 <Link to="/RatedGames">RatedGames</Link>
 <button variant= "outline" onClick={handleLogOutClick}>
     Logout

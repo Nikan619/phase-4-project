@@ -30,5 +30,7 @@ Rails.application.routes.draw do
 
  post "ratings", to: "ratings#create"
 
+ get "rating", to: "ratings#index"
+
 #  delete '/photos/:id', to: 'photos#destroy', as: 'delete_photo'
 end

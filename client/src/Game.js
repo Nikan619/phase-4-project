@@ -4,7 +4,7 @@ import './App.css'
 import GameCard from "./GameCard.js";
 import NewGame from './NewGame.js';
 
-function Game({currentUser}) {
+function Game({currentUser,ratings,setRatings}) {
 
 
     const [games,setGames]= useState([])
@@ -25,7 +25,7 @@ const mappedGames =()=>{
     
     return games.map((game) =>{
        
-  return( <ul><GameCard setGames={setGames} game={game} currentUser={currentUser}/></ul>)
+  return( <ul><GameCard setGames={setGames} game={game} currentUser={currentUser}  ratings={ratings} setRatings={setRatings}/></ul>)
 })}
 return (
     

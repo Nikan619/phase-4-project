@@ -1,6 +1,13 @@
 class RatingsController < ApplicationController
 
 
+    def index 
+        ratings = Rating.all
+        render json: ratings,status: :ok
+    end
+
+    
+
     def create
         rating = Rating.create(rating_params)
         render json: rating, status: :created
