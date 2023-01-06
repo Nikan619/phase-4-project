@@ -8,6 +8,7 @@ import Login from './Login';
 import Loggedin from "./Loggedin";
 import Test from './Test.js';
 import Game from './Game.js';
+import RatedGames from './RatedGames.js';
 
 
 function App() {
@@ -18,7 +19,6 @@ function App() {
   fetch("/me").then((r)=> {
     if(r.ok){
       r.json().then((user)=>setCurrentUser(user));
-     console.log(currentUser);
     }
   });
  },[]);
@@ -45,15 +45,18 @@ function App() {
     
 
       <>
+     <div className="App">
+      <Switch>
+        
       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <h1>Welcome {currentUser.username}</h1>
-      <Game />
+      <Game currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       
       
-      <main>
+    
         <Switch>
-        <Route  path="/datapage">
-        
+        <Route  exact path="/RatedGames">
+        <RatedGames/>
 
           </Route>
   

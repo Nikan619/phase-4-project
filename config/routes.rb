@@ -27,5 +27,8 @@ Rails.application.routes.draw do
 
  patch "/game_images/:id", to: "game_images#update"
 
+
+ post "ratings", to: "ratings#create"
+
 #  delete '/photos/:id', to: 'photos#destroy', as: 'delete_photo'
 end
