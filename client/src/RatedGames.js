@@ -10,15 +10,20 @@ function RatedGames({currentUser}){
     console.log(currentUser.game_images);
 
   const mappedImages= () => { return currentUser.game_images.map((image) => {
-   return  (<li>{image.name} </li>)})}
+   return  (<p>{image.name} :</p>)})}
    const mappedRatings = () =>{ return currentUser.ratings.map((rating) => {
-    return  (<li>{rating.game_rating} </li>)})} 
+    return  (<p>{rating.game_rating}/10 </p>)})} 
 
     return(
         <>
-        <h1> {currentUser.username}'s ratings </h1>
-        <ul>{mappedImages()}</ul>
-        <ul>{mappedRatings()}</ul>
+        <h1> {currentUser.username}'s Ratings </h1>
+        <div style ={{ float: "left", paddingLeft: "320px"}}>
+        <p>
+            {mappedImages()}</p>
+            </div>
+      <div style={{float: "right",paddingRight:"400px"}}> <p>{mappedRatings()}</p></div>
+
+        
         </>
        
     )
