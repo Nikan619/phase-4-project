@@ -14,9 +14,9 @@ function NavBar ({currentUser,setCurrentUser}){
     return (
         
         <div>
-        <Link exact to ="/"> Games Display {" "}</Link>
+        <Link className="games-link" exact to ="/" style={{padding: '280px', margin: '5px', cursor: 'pointer'}}>Games Display{" "}</Link><spc></spc>
 
-<Link to="/RatedGames"> {" "}  RatedGames </Link>
+<Link className="rate-games" to="/RatedGames" style={{padding: '200px', margin: '5px', cursor: 'pointer'}}> {" "}  RatedGames </Link>
 <button className="nav" variant= "outline" onClick={handleLogOutClick} style={{ float: 'right', padding: '5px', margin: '5px', cursor: 'pointer'}}>Logout</button>
 </div>
 

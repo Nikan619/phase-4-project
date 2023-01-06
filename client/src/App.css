@@ -91,3 +91,14 @@
   padding: 30px 10%
 }
 
+.rated-games {
+  outline-color: black;
+  outline-style: groove;
+  outline-width: 1px;
+}
+
+.game-link {
+  outline-color: black;
+  outline-style: groove;
+  outline-width: 1px;
+}
