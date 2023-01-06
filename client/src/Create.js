@@ -25,18 +25,22 @@ function handleSubmit(e) {
 
 return (
 
-  <form onSubmit={handleSubmit}>
+  <form onSubmit={handleSubmit} className='new-account-form'>
     <input
      type="text"
+     placeholder="Enter a Username"
     value={username}
      onChange={(e) => setUsername(e.target.value)}
   />
+  <br></br>
   <input
      type="password"
+     placeholder="Enter a Password"
     value={password}
      onChange={(e) => setPassword(e.target.value)}
   />
-   <button type="submit" >sign up</button>
+  <br></br>
+   <button type="submit">Create Account</button>
   </form>
 
    

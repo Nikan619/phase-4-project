@@ -53,14 +53,16 @@ function App() {
       </Route>
         
        <Route path ="/RatedGames">    
-       <NavBar />
+       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser}  />
         <RatedGames currentUser={currentUser}/>
       </Route>
   
         </Switch>
-      </div>
+        </div>
+      
        
-
+   
+    
   );
 }
 
