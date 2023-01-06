@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import './App.css'
-
+import Game from './Game.js';
 import NavBar from './NavBar';
 import Login from './Login';
 import Loggedin from "./Loggedin";
@@ -54,6 +54,7 @@ function App() {
   
         </Switch>
         </main>
+        <Game></Game>
        </> 
        
    

@@ -1,2 +1,3 @@
 class GameImage < ApplicationRecord
+    
 end
